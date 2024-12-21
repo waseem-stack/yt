@@ -41,7 +41,7 @@
         <!-- Video 1 -->
         <div class="video-item">
             <iframe 
-                src="https://www.youtube.com/embed/jUPL831oxZQ?autoplay=1&loop=1&mute=1&playlist=jUPL831oxZQ&rel=0&controls=0" 
+                src="https://www.youtube.com/embed/jUPL831oxZQ?autoplay=1&loop=1&playlist=jUPL831oxZQ&rel=0&controls=0" 
                 allow="autoplay; fullscreen" 
                 allowfullscreen>
             </iframe>
@@ -49,79 +49,23 @@
         <!-- Video 2 -->
         <div class="video-item">
             <iframe 
-                src="https://www.youtube.com/embed/WMXI6XysceU?autoplay=1&loop=1&mute=1&playlist=WMXI6XysceU&rel=0&controls=0" 
+                src="https://www.youtube.com/embed/3lQXOOnR674?autoplay=1&loop=1&playlist=3lQXOOnR674&rel=0&controls=0" 
                 allow="autoplay; fullscreen" 
                 allowfullscreen>
             </iframe>
         </div>
         <!-- Add more videos as needed -->
-
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/jUPL831oxZQ?autoplay=1&loop=1&mute=1&playlist=jUPL831oxZQ&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <!-- Video 2 -->
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/WMXI6XysceU?autoplay=1&loop=1&mute=1&playlist=WMXI6XysceU&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/jUPL831oxZQ?autoplay=1&loop=1&mute=1&playlist=jUPL831oxZQ&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <!-- Video 2 -->
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/WMXI6XysceU?autoplay=1&loop=1&mute=1&playlist=WMXI6XysceU&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-
-<div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/jUPL831oxZQ?autoplay=1&loop=1&mute=1&playlist=jUPL831oxZQ&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <!-- Video 2 -->
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/WMXI6XysceU?autoplay=1&loop=1&mute=1&playlist=WMXI6XysceU&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/jUPL831oxZQ?autoplay=1&loop=1&mute=1&playlist=jUPL831oxZQ&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <!-- Video 2 -->
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/WMXI6XysceU?autoplay=1&loop=1&mute=1&playlist=WMXI6XysceU&rel=0&controls=0" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        
-
-
-
     </div>
+    <script>
+        // Ensure sound works after user interaction
+        document.body.addEventListener('click', () => {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = ''; // Reset iframe src to reload it
+                iframe.src = src; // Reapply src to ensure sound plays
+            });
+        });
+    </script>
 </body>
 </html>
